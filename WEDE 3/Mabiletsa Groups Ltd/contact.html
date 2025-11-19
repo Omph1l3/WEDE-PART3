@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us | Mabiletsa Group Ltd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <meta name="description" content="Contact Mabiletsa Group Ltd for enquiries, bookings, partnerships, and general communication.">
+  <meta name="keywords" content="Contact, Mabiletsa Group, Services, Bookings, Enquiries">
+  <meta name="author" content="Mabiletsa Group Ltd">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    header {
+      background-color: #000;
+      text-align: center;
+      border-bottom: 2px solid #FFD700;
+      padding: 10px;
+      position: relative;
+    }
+
+    header img {
+      width: 200px;
+      height: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 15px 0 0 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #FFD700;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #fff;
+    }
+
+    /* Hamburger */
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: #FFD700;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+    }
+
+    @media (max-width: 617px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #000;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        border-top: 2px solid #FFD700;
+      }
+
+      nav ul li {
+        display: block;
+        margin: 12px 0;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1, h2 {
+      color: #FFD700;
+      text-align: center;
+    }
+
+    /* FORM */
+    form {
+      background: #111;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #FFD700;
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      color: #FFD700;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      margin-bottom: 15px;
+      background: #222;
+      color: white;
+      border: 1px solid #444;
+    }
+
+    textarea {
+      height: 120px;
+    }
+
+    button {
+      background: #FFD700;
+      color: #000;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+      width: 100%;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    footer {
+      background-color: #000;
+      color: #FFD700;
+      text-align: center;
+      padding: 12px;
+      border-top: 2px solid #FFD700;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <img src="image/aa.jpeg" alt="Company Logo">
+    <div class="menu-toggle">☰</div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home page</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html">Products & Services</a></li>
+        <li><a href="news.html">News & Events</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+		<li><a href="enquiry.html">Enquiry</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <h1>Contact Us</h1>
+
+    <p style="text-align:center; font-size:1.1em;">
+      Have questions, feedback, or general enquiries?  
+      Send us a message and we will respond shortly.
+    </p>
+
+    <!-- CONTACT FORM -->
+    <form id="contactForm">
+
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" pattern="[0-9+ ]{7,15}" required>
+
+      <label for="type">Message Type</label>
+      <select id="type" required>
+        <option value="">-- Select --</option>
+        <option>General Enquiry</option>
+        <option>Booking Question</option>
+        <option>Partnership</option>
+        <option>Complaint</option>
+        <option>Praise / Compliment</option>
+      </select>
+
+      <label for="message">Message</label>
+      <textarea id="message" required minlength="10"></textarea>
+
+      <button type="submit">Send Message</button>
+
+    </form>
+
+  </main>
+
+  <footer>
+    <p>&copy; ST10478180 | Mabiletsa Group Ltd</p>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('nav ul').classList.toggle('active');
+    });
+
+    // FORM VALIDATION + EMAIL SEND
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("fullname").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const type = document.getElementById("type").value;
+      const msg = document.getElementById("message").value;
+
+      // Compile email body
+      const body =
+        "Full Name: " + name + "%0D%0A" +
+        "Email: " + email + "%0D%0A" +
+        "Phone: " + phone + "%0D%0A" +
+        "Message Type: " + type + "%0D%0A%0D%0A" +
+        "Message:%0D%0A" + msg;
+
+      // Send email
+      window.location.href = "mailto:info@mabiletsagroup.com?subject=New Contact Form Submission&body=" + body;
+    });
+  </script>
+
+</body>
+</html>

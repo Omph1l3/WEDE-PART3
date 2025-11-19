@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Products and Services - Mabiletsa Group Ltd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* ---------- Base Styles ---------- */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #000 0%, #1a1a1a 100%);
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* ---------- Header ---------- */
+    header {
+      background-color: #000;
+      text-align: center;
+      border-bottom: 2px solid #FFD700;
+      padding: 15px 10px;
+      position: relative;
+      box-shadow: 0 2px 8px rgba(255, 215, 0, 0.2);
+    }
+
+    header img {
+      width: 180px;
+      height: auto;
+      border-radius: 6px;
+    }
+
+    /* ---------- Navigation ---------- */
+    nav ul {
+      list-style: none;
+      margin: 15px 0 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.05em;
+      transition: color 0.3s, border-bottom 0.3s;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 4px;
+    }
+
+    nav ul li a:hover {
+      color: #FFD700;
+      border-bottom: 2px solid #FFD700;
+    }
+
+    /* ---------- Hamburger Button ---------- */
+    .menu-toggle {
+      display: none;
+      font-size: 30px;
+      color: #FFD700;
+      cursor: pointer;
+      position: absolute;
+      right: 20px;
+      top: 15px;
+    }
+
+    /* ---------- Responsive Menu ---------- */
+    @media (max-width: 617px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #000;
+        text-align: center;
+        padding: 20px 0;
+        border-top: 2px solid #FFD700;
+        width: 100%;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+
+      .product {
+        width: calc(100% - 40px);
+      }
+    }
+
+    /* ---------- Main Section ---------- */
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #FFD700;
+      font-family: "Georgia", serif;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 6px rgba(255, 215, 0, 0.3);
+    }
+
+    h2 {
+      color: #fff;
+      margin-top: 30px;
+      font-size: 1.8em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h3 {
+      color: #FFD700;
+      margin-top: 20px;
+      font-size: 1.3em;
+    }
+
+    p {
+      font-size: 1.1em;
+      max-width: 900px;
+      margin: 10px auto 20px;
+      color: #f0f0f0;
+    }
+
+    /* ---------- Product Grid ---------- */
+    .products-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .product {
+      background-color: #111;
+      border: 2px solid #FFD700;
+      border-radius: 10px;
+      padding: 15px;
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+      box-shadow: 0 3px 6px rgba(255, 215, 0, 0.2);
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+      border-color: #fff;
+      box-shadow: 0 5px 12px rgba(255, 255, 255, 0.25);
+    }
+
+    .product img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      border: 1px solid #FFD700;
+      box-shadow: 0 3px 6px rgba(255, 215, 0, 0.2);
+    }
+
+    .price {
+      color: #FFD700;
+      font-weight: bold;
+      margin-top: 10px;
+      font-size: 1.1em;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      background-color: #000;
+      color: #FFD700;
+      text-align: center;
+      padding: 15px;
+      border-top: 2px solid #FFD700;
+      margin-top: 50px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="image/aa.jpeg" alt="Mabiletsa Group Logo">
+
+    <!-- Hamburger button -->
+    <div class="menu-toggle">☰</div>
+
+    <nav>
+      <ul>
+        <li><a href="home.html">Home Page</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html">Products & Services</a></li>
+        <li><a href="news.html">News Update</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+		<li><a href="enquiry.html">Enquiry</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1><i>Our Creative Ventures</i></h1>
+
+    <!-- Winery -->
+    <section>
+      <h2>Mabiletsa Winery</h2>
+      <p>Savour the art of winemaking with our signature wine brand, crafted with passion and precision.</p>
+      <div class="products-grid">
+        <div class="product"><img src="image/wine1.jpeg" alt="Wine 1"><p class="price">Price: R120</p></div>
+        <div class="product"><img src="image/wine2.jpeg" alt="Wine 2"><p class="price">Price: R120</p></div>
+        <div class="product"><img src="image/wine3.jpeg" alt="Wine 3"><p class="price">Price: R120</p></div>
+        <div class="product"><img src="image/wine4.jpeg" alt="Wine 4"><p class="price">Price: R120</p></div>
+        <div class="product"><img src="image/wine5.jpeg" alt="Wine 5"><p class="price">Price: R720</p></div>
+        <div class="product"><img src="image/wine6.jpeg" alt="Wine 6"><p class="price">Price: R300</p></div>
+        <div class="product"><img src="image/wine7.jpeg" alt="Wine 7"><p class="price">Prices exclude courier</p></div>
+      </div>
+    </section>
+
+    <!-- Books -->
+    <section>
+      <h2>Publishing and Literature</h2>
+      <p>Explore books authored by our experts, offering inspiration, wisdom, and transformation through storytelling.</p>
+      <div class="products-grid">
+        <div class="product"><img src="image/book1.jpeg" alt="Book 1"><p class="price">Price: R200</p></div>
+        <div class="product"><img src="image/book2.jpeg" alt="Book 2"><p class="price">Price: R200</p></div>
+        <div class="product"><img src="image/book3.jpeg" alt="Book 3"><p class="price">Price: R280</p></div>
+        <div class="product"><img src="image/book7.jpeg" alt="Book 4"><p class="price">Price: R200</p></div>
+      </div>
+    </section>
+
+    <!-- Divisions -->
+    <section>
+      <h2>Our Divisions</h2>
+
+      <h3>Grief and Loss Coaching Practice</h3>
+      <p>Guiding individuals through healing and growth during difficult times with compassion and expertise.</p>
+      <div class="products-grid">
+        <div class="product"><img src="image/cc1.jpeg" alt="Coaching 1"></div>
+        <div class="product"><img src="image/cc2.jpeg" alt="Coaching 2"></div>
+      </div>
+
+      <h3>Corporate, Business Coaching & Speaking Engagements</h3>
+      <p>Empowering professionals and organizations through mentorship, motivational talks, and leadership sessions.</p>
+      <div class="products-grid">
+        <div class="product"><img src="image/cc3.jpeg" alt="Coaching 3"></div>
+        <div class="product"><img src="image/cc4.jpeg" alt="Coaching 4"></div>
+        <div class="product"><img src="image/cc5.jpeg" alt="Coaching 5"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; ST10478180 | Mabiletsa Group Ltd</p>
+  </footer>
+
+  <script>
+    // Toggle mobile menu
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('nav ul').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

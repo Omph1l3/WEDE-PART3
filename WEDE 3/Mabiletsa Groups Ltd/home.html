@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home Page - Mabiletsa Group Ltd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* ---------- Base Styles ---------- */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #000 0%, #1a1a1a 100%);
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* ---------- Header ---------- */
+    header {
+      background-color: #000;
+      text-align: center;
+      border-bottom: 2px solid #FFD700;
+      padding: 15px 10px;
+      position: relative;
+      box-shadow: 0 2px 8px rgba(255, 215, 0, 0.2);
+    }
+
+    header img {
+      width: 180px;
+      height: auto;
+      border-radius: 6px;
+    }
+
+    /* ---------- Navigation ---------- */
+    nav ul {
+      list-style: none;
+      margin: 15px 0 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.05em;
+      transition: color 0.3s, border-bottom 0.3s;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 4px;
+    }
+
+    nav ul li a:hover {
+      color: #FFD700;
+      border-bottom: 2px solid #FFD700;
+    }
+
+    /* ---------- Hamburger Button (Mobile) ---------- */
+    .menu-toggle {
+      display: none;
+      font-size: 30px;
+      color: #FFD700;
+      cursor: pointer;
+      position: absolute;
+      right: 20px;
+      top: 15px;
+    }
+
+    /* ---------- Responsive Menu ---------- */
+    @media (max-width: 617px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #000;
+        text-align: center;
+        padding: 20px 0;
+        border-top: 2px solid #FFD700;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+    }
+
+    /* ---------- Main Content ---------- */
+    main {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    main h1 {
+      font-family: "Georgia", serif;
+      color: #FFD700;
+      font-size: 2.8em;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 6px rgba(255, 215, 0, 0.3);
+    }
+
+    main h2 {
+      color: #fff;
+      margin-top: 25px;
+      font-size: 1.6em;
+    }
+
+    main p {
+      font-size: 1.1em;
+      max-width: 700px;
+      margin: 0 auto 20px;
+      color: #f0f0f0;
+    }
+
+    main img {
+      width: 500px;
+      max-width: 90%;
+      height: auto;
+      border: 3px solid #FFD700;
+      border-radius: 10px;
+      margin: 25px 0;
+      box-shadow: 0 4px 10px rgba(255, 215, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    main img:hover {
+      transform: scale(1.05);
+    }
+
+    /* ---------- Buttons ---------- */
+    main a.button {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      background: linear-gradient(90deg, #FFD700, #e6c200);
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1.05em;
+      box-shadow: 0 3px 6px rgba(255, 215, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    main a.button:hover {
+      background: #fff;
+      color: #000;
+      box-shadow: 0 3px 10px rgba(255, 255, 255, 0.4);
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      background-color: #000;
+      color: #FFD700;
+      text-align: center;
+      padding: 15px;
+      border-top: 2px solid #FFD700;
+      margin-top: 40px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="image/aa.jpeg" alt="Mabiletsa Group Logo">
+
+    <!-- Hamburger button -->
+    <div class="menu-toggle">☰</div>
+
+    <nav>
+      <ul>
+        <li><a href="home.html">Home Page</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html">Products & Services</a></li>
+        <li><a href="news.html">News Update</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+		<li><a href="enquiry.html">Enquiry</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Mabiletsa Group Ltd</h1>
+    <h2>The Soul Healer</h2>
+
+    <img src="image/bb.jpeg" alt="Mabiletsa Group promotional image">
+
+    <h2>See What We Have to Offer</h2>
+    <p>
+      From Coaching, Speaking Engagements, Mabiletsa Winery, Wine Branding Services, 
+      Author Publishing Services, and our Books — we empower and inspire individuals and brands alike.
+    </p>
+    <a href="about.html" class="button">More About Us</a>
+
+    <h2>Connect With Us</h2>
+    <p>
+      <a href="https://www.instagram.com/neothesoulhealer?igsh=MXVxaGdqNndzYjZpeA=" target="_blank" class="button">Instagram</a>
+      <a href="https://www.facebook.com/share/179bWB4dck/?mibextid=wwXlfr" target="_blank" class="button">Facebook</a>
+    </p>
+  </main>
+
+  <footer>
+    <p>&copy; ST10478180 | Mabiletsa Group Ltd</p>
+  </footer>
+
+  <script>
+    // Toggle mobile menu
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('nav ul').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
